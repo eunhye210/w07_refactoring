@@ -5,6 +5,11 @@ const passport = require("passport");
 
 const indexRouter = require('./routes/index');
 
+const connectMongoDB = require("./config/connectMongoDB");
+const passportConfig = require("./config/passportConfig");
+connectMongoDB();
+passportConfig();
+
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
