@@ -1,0 +1,121 @@
+body {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a.top-button {
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+div.error-msg {
+  margin: 5px;
+  color: red;
+}
+
+div.option-msg {
+  margin: 5px;
+  color: orange;
+  display: block;
+}
+
+div.submit {
+  text-align: center;
+  margin: 20px;
+}
+
+div.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.option {
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 18px;
+}
+
+div.info {
+  margin: 2px;
+  color: rgb(80, 77, 77);
+  font-size: 18px;
+}
+
+input.delete {
+  border: none;
+  background-color: transparent;
+  color: orangered;
+  font-size: 18px;
+}
+
+input.title {
+  width: 320px;
+  height: 20px;
+  font-size: 15px;
+}
+
+input.option-value {
+  width: 250px;
+  height: 20px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+input.add-option {
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+input.date {
+  width: 260px;
+  height: 20px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+input.submit {
+  width: 80px;
+  height: 28px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+}
+
+input.option {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+fieldset {
+  border: 3px solid #AAF0D1;
+  width: 350px;
+  min-height: 200px;
+  padding: 15px;
+  margin: 10px;
+}
+
+legend, label {
+  margin-left: 11px;
+  color:  #708090;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}

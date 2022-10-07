@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>voting-platform</title>
+    <link rel="stylesheet" href="/stylesheets/createVote.css" />
+  </head>
+  <body>
+    <a href="/" class="top-button">Home</a>
+    <h1>Create a Vote</h1>
+    <div class="error-msg"><%= typeof errorMsg !== "undefined" ? errorMsg : "" %></div>
+    <form action="/votings/new" method="POST">
+      <label>title : 
+        <input type="text" class="title" name="title">
+      </label>
+      <fieldset>
+        <legend>option list</legend>
+          <div id="optionRule" class="option-msg">
+            * You must provide at least 2 options *
+          </div>
+        <div id="optionList" name="optionList"></div>
+        <div class="option-footer">
+          <input type="text" id="addValue" class="option-value" placeholder="option value">
+          <input type="button" value="add" class="add-option" onClick="addList()">
+        </div>
+      </fieldset>
+      <div>
+        <label>expiration : 
+          <input type="datetime-local" class="date" name="dateTime">
+        </label>
+      </div>
+      <div class="submit">
+        <input type="submit" class="submit" value="submit">
+      </div>
+    </form>
+  </body>
+  <script src="/javascripts/createVote.js"></script>
+</html>

@@ -5,6 +5,7 @@ const { signup, createUser } = require("./controllers/signupController");
 const { loginPage, login } = require("./controllers/loginController");
 const { validateLogin } = require("../middlewares/validateLogin");
 const { validateSignup } = require('../middlewares/validateSignup');
+const { logout } = require("./controllers/logoutController");
 
 router.route("/signup")
   .get(signup)
@@ -13,5 +14,8 @@ router.route("/signup")
 router.route("/login")
   .get(loginPage)
   .post(validateLogin, login);
+
+router.route("/logout")
+  .post(logout);
 
 module.exports = router;

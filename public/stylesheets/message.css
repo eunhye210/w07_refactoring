@@ -1,0 +1,24 @@
+body {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a.top-button {
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+h2 {
+  color: #708090;
+}

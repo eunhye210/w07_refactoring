@@ -39,6 +39,6 @@ exports.validateSignup = async function (req, res, next) {
       next();
     }
   } catch (err) {
-    next(err);
+    next(err); // 좀 더 구체적인 에러 처리 필요!!
   }
 };

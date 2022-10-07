@@ -6,6 +6,7 @@ const createError = require("http-errors");
 
 const indexRouter = require('./routes/index');
 const authRouter = require("./routes/auth");
+const votingRouter = require("./routes/votings");
 
 const connectMongoDB = require("./config/connectMongoDB");
 const passportConfig = require("./config/passportConfig");
@@ -33,6 +34,7 @@ app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use("/auth", authRouter);
+app.use("/votings", votingRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));

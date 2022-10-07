@@ -19,10 +19,24 @@ const voteSchema = new mongoose.Schema({
   }],
   expiration: {
     type: Date,
-  },
-  participants: {
-    type: Array
   }
 });
+
+voteSchema.statics.createVote = async function (author, title, option, dateTime) {
+  const options = option.map((item) => {
+    return {
+      name: item,
+      voteNum: 0
+    };
+  });
+
+  return await this.create({
+    author,
+    title,
+    options,
+    expiration: dateTime
+
+  });
+};
 
 module.exports = mongoose.model("Vote", voteSchema);
