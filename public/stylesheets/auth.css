@@ -1,0 +1,65 @@
+body {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a.home {
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+div.footer {
+  display: block;
+  margin-top: 20px;
+}
+
+div.error-msg {
+  margin: 5px;
+  color: red;
+}
+
+label {
+  margin-left: 4px;
+}
+
+a.move {
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+input.submit-login {
+  margin-left: 60px;
+}
+
+input.submit-signup {
+  margin-left: 100px;
+}
+
+input.auth {
+  width: 200px;
+  height: 20px;
+  margin: 5px;
+}
+
+input.auth-oneColumn {
+  width: 240px;
+  height: 20px;
+  margin: 5px;
+}
+
+input.auth-twoColumns {
+  width: 110px;
+  height: 20px;
+  margin: 5px;
+}

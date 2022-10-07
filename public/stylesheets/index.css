@@ -1,0 +1,81 @@
+body {
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+div.message {
+  color: #708090;
+  font-size: 18px;
+}
+
+a.top-button {
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a.title {
+  color:  #708090;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+a.vote {
+  display: block;
+  width: 140px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #ade0c9;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+fieldset {
+  border: 3px solid #AAF0D1;
+  width: 500px;
+  padding: 15px;
+  margin: 5px;
+}
+
+div.welcome {
+  color:  gray;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+div.vote-buttons {
+  display: flex;
+  margin: 10px;
+}
+
+form.logout {
+  justify-self: end;
+}
+
+input.logout {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 28px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: #c0c0c0;
+  font-size: 20px;
+  border: none;
+}

@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>voting-platform</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% if (typeof username === "undefined") { %>
+      <a href="/auth/login" class="top-button">Login</a>
+    <% } else { %>
+      <form action="auth/logout" class="logout" method="POST">
+        <input type="submit" class="logout" value="Logout">
+      </form>
+    <% } %>
+    <h1>Voting Platform</h1>
+    <div class="welcome"><%= typeof username !== "undefined" ? "Welcome " + username + " !" : "" %></div>
+    <% if (typeof username !== "undefined") { %>
+      <div class="vote-buttons">
+        <a href="/my-votings" class="vote">My Votes</a>
+        <a href="/votings/new" class="vote">Create Vote</a>
+      </div>
+    <% } %>
+    <% votes.forEach(vote => { %>
+      <fieldset>
+        <legend><a href="/votings/<%= vote.id %>" class="title"><%= vote.title %></a></legend>
+        <div>작성자 : <%= vote.username %></div>
+        <div>만료 날짜 및 시간 : <%= vote.expiration.toLocaleString() %></div>
+        <div>진행중 : <%= (Date.now() < new Date(vote.expiration)) ? "yes" : "no" %></div>
+      </fieldset>
+    <% }) %>
   </body>
 </html>

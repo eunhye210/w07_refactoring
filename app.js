@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const session = require("express-session");
 const passport = require("passport");
+const createError = require("http-errors");
 
 const indexRouter = require('./routes/index');
+const authRouter = require("./routes/auth");
 
 const connectMongoDB = require("./config/connectMongoDB");
 const passportConfig = require("./config/passportConfig");
@@ -30,11 +32,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', indexRouter);
+app.use("/auth", authRouter);
 
 app.use(function(req, res, next) {
   next(createError(404));
 });
-
 
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;

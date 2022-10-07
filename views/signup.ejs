@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>voting-platform</title>
+    <link rel="stylesheet" href="/stylesheets/auth.css" />
+  </head>
+  <body>
+    <a href="/" class="home">Home</a>
+    <h1>Sign up</h1>
+    <div class="error-msg"><%= typeof errorMsg !== "undefined" ? errorMsg : "" %></div>
+    <form action="/auth/signup" method="POST">
+      <div>
+        <input
+          type="text"
+          class="auth-oneColumn"
+          name="username"
+          placeholder="Username"
+          value="<%= typeof username !== 'undefined' ? username : '' %>"
+        >
+      </div>
+      <div>
+        <input
+          type="email"
+          class="auth-oneColumn"
+          name="email"
+          placeholder="Email"
+          value="<%= typeof email !== 'undefined' ? email : '' %>"
+        >
+      </div>
+      <div>
+        <input
+          type="password"
+          class="auth-twoColumns"
+          id="password"
+          name="password"
+          placeholder="Password"
+          value="<%= typeof password !== 'undefined' ? password : '' %>"
+        >
+        <input
+          type="password"
+          class="auth-twoColumns"
+          id="password2"
+          name="password2"
+          placeholder="Confirm"
+        >
+      </div>
+      <div>
+        <label>Show password
+          <input type="checkbox" id="checkbox" onclick="toggleModeSignUp()">
+        </label>
+      </div>
+      <div class="footer">
+        <a href="/auth/login" class="move">Sign in instead</a>
+        <input type="submit" class="submit-signup" value="Next">
+      </div>
+    </form>
+  </body>
+  <script src="/javascripts/signUp.js"></script>
+</html>
